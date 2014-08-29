@@ -11,11 +11,8 @@
 @interface QTree : NSObject
 
 -(void)insertObject:(id<QTreeInsertable>)insertableObject;
--(void)removeObject:(id<QTreeInsertable>)insertableObject;
 
 @property(nonatomic, readonly) NSUInteger count;
-
-- (void) cleanup;
 
 -(NSArray*)getObjectsInRegion:(MKCoordinateRegion)region minNonClusteredSpan:(CLLocationDegrees)span;
 // Returned array is sorted from the least to the most distant
